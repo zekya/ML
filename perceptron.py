@@ -46,7 +46,7 @@ if __name__ =='__main__':
     df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None)
     X=df.iloc[:,0:2]
     Y= np.array(list(map(lambda x: 1 if x=='Iris-setosa' else -1, df[4])))
-    model = perceptron(10000)
+    model = perceptron(100)
     model.fit(X,Y)
     count=0
     for i in range(len(X)):
